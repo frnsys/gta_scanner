@@ -6,6 +6,7 @@ import pandas as pd
 from tqdm import tqdm
 from pydub import AudioSegment
 
+N_TO_GENERATE = 1000
 PATTERN_RE = re.compile('\(([^()]+)\)')
 
 spec = yaml.load(open('tree.yml'))
@@ -54,7 +55,7 @@ df = {
     'hashes': [],
     'filename': []
 }
-for i in tqdm(range(1000)):
+for i in tqdm(range(N_TO_GENERATE)):
     fname = f'data/audio/{i}.wav'
     seq = parse_pattern(spec['START'][0])
 
