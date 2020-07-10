@@ -1,0 +1,4 @@
+pydub==0.24.1
+PyYAML==5.1.2
+tqdm==4.45.0
+pandas==0.24.2
